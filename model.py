@@ -50,7 +50,7 @@ def build_model(im_shape, vocab_size, num_answers, big_model):
   x1 = Dropout(0.5)(x1)
   x1 = BatchNormalization(axis=1)(x1)
   x1 = tf.keras.layers.GlobalAveragePooling2D()(x1)
-  x1= Dense(512, activation= 'tanh')(x1)
+  x1= Dense(512, activation= 'tanh')(x1) #A dense layer is a classic fully connected neural network layer : each input node is connected to each output node
   print("test2")
   print("shape of x1",x1.shape)
   # The question network
@@ -70,7 +70,7 @@ def build_model(im_shape, vocab_size, num_answers, big_model):
     
     # ques = tf.expand_dims(ques , axis = -2)
     
-    IQ = tf.nn.tanh(x1 + x2)
+    IQ = tf.nn.tanh(x1 + x2)#The module tensorflow.nn provides support for many basic neural network operations.
 
     print("IQ shpe: ", IQ.shape)
      
