@@ -59,7 +59,7 @@ def setup(use_data_dir):
 	
   print('\n--- Fitting question tokenizer...')
   tokenizer = Tokenizer()
-  tokenizer.fit_on_texts(train_qs)
+  tokenizer.fit_on_texts(train_qs) #The fit_on_texts method is a part of Keras tokenizer class which is used to update the internal vocabulary for the texts list
 
   # We add one because the Keras Tokenizer reserves index 0 and never uses it.
   vocab_size = len(tokenizer.word_index) + 1
