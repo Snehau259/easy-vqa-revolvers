@@ -35,4 +35,4 @@ train_X_ims, train_X_seqs, train_Y, test_X_ims, test_X_seqs, test_Y, im_shape, v
 import numpy as np
 import os
 np.savez('temp_arra.npz', train_X_ims=train_X_ims,train_X_seqs = train_X_seqs, train_Y = train_Y, test_X_ims = test_X_ims, test_X_seqs = test_X_seqs, test_Y = test_Y, im_shape = im_shape, vocab_size = vocab_size, num_answers= num_answers)
-
+#npz file format is a zipped archive of files named after the variables they contain. The archive is not compressed and each file in the archive contains one variable in . npy format.
